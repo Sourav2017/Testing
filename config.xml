@@ -9,4 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+	<plugin name="cordova-plugin-x-socialsharing" source="npm" />
+	<plugin name="com.ams.plugins.barcodescanner" spec="2.0.6" source="pgb" />
 </widget>
