@@ -4,6 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
+		
+		<script>
+			document.addEventListener("deviceready", onDeviceReady, false);
+				function onDeviceReady() {
+					console.log(navigator.contacts);
+					document.getElementById("demo").innerHTML = navigator.contacts;
+				}
+		
+		</script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
@@ -12,6 +21,9 @@
 		</div>
 		<div style="border:1px solid #ccc;height:50px;width:200px;text-allign:center;">
 			Test
+		</div>
+		<div id="demo">
+		
 		</div>
 		
     </body>
