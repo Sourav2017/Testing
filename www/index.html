@@ -8,8 +8,17 @@
 		<script>
 			document.addEventListener("deviceready", onDeviceReady, false);
 				function onDeviceReady() {
-					console.log(navigator.contacts);
-					document.getElementById("demo").innerHTML = navigator.contacts;
+					//console.log(navigator.contacts);
+					//document.getElementById("demo").innerHTML = navigator.contacts;
+					var myContact = navigator.contacts.create({"displayName": "Test User"});
+					myContact.save(onSuccessCallBack, onErrorCallBack);
+					function onSuccessCallBack(contact) {
+						document.getElementById("demo").innerHTML = "saved";
+					};
+
+					function onErrorCallBack(contactError) {
+						alert("Error = " + contactError.code);
+					};
 				}
 		
 		</script>
