@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+	    <div class="col-md-4">
+	    	<div ng-include="'template/dashboardLeft.html'"></div>
+	    </div>
+    	<div class="col-md-8">
+    	<div style="padding-bottom:10px;">
+    	<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	Recharge</span>
+    </div>
+    		
+    Postpaid
+    <input type="radio" ng-model="Plan.name" value="Postpaid">
+    
+    Prepaid
+  
+    <input type="radio" ng-model="Plan.name" value="Prepaid">
+   
+   	<div>
+		Enter your Mobile number*
+		<input type="text" ng-model="Plan.Mobile"></input>
+	</div>
+	<div>
+		Operator*
+
+		<select ng-options="planop.operator for planop in operators" 
+   			ng-model="Plan.Operator" ng-change="selectionChange(Plan.Operator)"></select>
+	</div>
+
+	<div>
+		Amount*
+		<input type=text" ng-model="Plan.Amount"></input>
+	</div>
+
+	<button style="margin-top:10px;" class="btn btn-info" type="button" ng-click="RechargeNow(Plan)">Recharge Now</button>
+
+	<button style="margin-top:10px;" class="btn btn-info" type="button" ng-click="ViewRecharge()">View Recharges</button>
+
+		</div>
+	</div>
+</div>

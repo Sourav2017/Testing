@@ -1,0 +1,86 @@
+<style>
+table,tr,td{
+	border:2px solid #000;
+}
+</style>
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    	<div ng-include="'template/dashboardLeft.html'"></div>
+    </div>
+    <div class="col-md-9">
+    	<div>
+    	
+
+    	<div style="padding-bottom:10px;">
+    	<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	Need Assistance</span>
+    </div>
+
+    	<div style="padding-bottom:15px;border-bottom:2px solid #ccc;">	
+    	<div style="font-weight:bold;font-size:18px;">1.What seems to be an Issue?</div>
+
+    	<select ng-options="srvc.name for srvc in service" 
+   ng-model="selectedItem" ng-change="selectionChange(selectedItem)"></select>
+   <div ng-hide="selectionChange">Please select an option</div>
+
+   		</div>
+
+   		<div style="padding-top:20px;">
+   			<div style="font-weight:bold;font-size:18px;">2.Contact Detail</div>	
+   			<div>
+   				<div style="font-weight:bold;"> 
+   					Email		
+   				</div>	
+   				<div>
+   					<input type="text" ng-model="serviceemail"/>	
+   				</div>	
+   				<div ng-hide="serviceemailmend">Email Id is mendatory</div>
+
+   				<div style="font-weight:bold;">
+   					Contact		
+   				</div>	
+   				<div>
+   					<input type="text" ng-model="serviccontact"/>	
+   				</div>	
+   				<div ng-hide="serviccontactmend">Contact is mendatory</div>
+   				<div style="font-weight:bold;">
+   					Alternate inputs		
+   				</div>	
+   				<div>
+   					<textarea ng-model="alternetinput"></textarea>	
+   				</div>
+   				<div ng-hide="alternetinputmend">Please explain the issue</div>	
+   				
+   			</div>
+
+   			
+
+   			<button style="margin-left: 26px; margin-top: 20px;" class="btn btn-primary" type="button" ng-click="submitRqst()">Submit</button>
+   			<button style="margin-left: 26px; margin-top: 20px;" class="btn btn-info" type="button" ng-click="viewRqst()">View Requests</button>
+
+   		</div>
+   		</div>
+
+   		<div>
+<div ng-hide="requestIdShow" style="font-weight:bold;color:blue;font-size:16px;">
+   				Your request Id is {{requestId}}
+   			</div>
+   		</div>
+
+   		
+
+
+    	
+
+    </div>
+   </div>
+</div>
+

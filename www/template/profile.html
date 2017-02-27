@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+	    <div class="col-md-4">
+	    	<div ng-include="'template/dashboardLeft.html'"></div>
+	    </div>
+    	<div class="col-md-8">
+    	<div style="padding-bottom:10px;">
+    		<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	My Profile</span>
+    	</div>
+    	<div>
+    	<div>
+	Firstname*
+	<div ng-show="toggleProfileView" style="color:blue;">{{profileData.firstName}}</div>
+	
+	<input ng-show="!toggleProfileView" type="text" ng-model="profileData.firstName"></input>
+	</div>
+	<div>
+		LastName*
+		<div style="color:blue;" ng-show="toggleProfileView">{{profileData.lasttName}}</div>
+		<input ng-show="!toggleProfileView" type=text" ng-model="profileData.lasttName"></input>
+	</div>
+
+	<div>
+		Contact*
+		<div style="color:blue;" ng-show="toggleProfileView">{{profileData.contact}}</div>
+		<input ng-show="!toggleProfileView" type=text" ng-model="profileData.contact"></input>
+	</div>
+
+	<div>
+		Email*
+		<div style="color:blue;" ng-show="toggleProfileView">{{profileData.email}}</div>
+		<input ng-show="!toggleProfileView" type=email" ng-model="profileData.email"></input>
+	</div>
+
+	<div>
+		Address*
+		<div style="color:blue;" ng-show="toggleProfileView">{{profileData.address}}</div>
+		<textarea ng-show="!toggleProfileView" ng-model="profileData.address"></textarea>
+	</div>
+
+	<button ng-show="toggleProfileView" type="submit" class="btn btn-primary" ng-click="editProfile(profileData)">Edit</button>
+	<button ng-show="!toggleProfileView" type="submit" class="btn btn-primary" ng-click="submitProfile(profileData)">Submit</button>		
+    	</div>
+  	</div>
+  </div>
+ </div>
+
+
+
+	

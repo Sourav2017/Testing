@@ -1,0 +1,67 @@
+
+<style>
+table,tr,td{
+	border:3px solid #000;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    	<div ng-include="'template/dashboardLeft.html'"></div>
+    </div>
+    <div class="col-md-8">
+
+    	<div style="padding-bottom:10px;">
+    	<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	Bill History</span>
+    </div>
+<div>
+	<table>
+	<tr><td align="center">Bill Period</td>
+	<td align="center">Bill Amount</td>
+	<td align="center">Detail view</td>
+	</tr>
+	<tr ng-repeat="bh in billhistory">
+	<td align="center">
+		{{bh.billperiod}}
+	</td>
+	<td align="center">
+		{{bh.billAmount}}
+	</td>
+	<td align="center">
+		<a href="#/viewBill:{{bh.billAmount}}">Detailed View</a>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div style="padding-top:20px;">
+	<table>
+	<tr>
+	<td align="center">
+		Payment Amount
+	</td>
+	<td align="center">
+	Bill Period
+	</td>
+	<td align="center">
+	Payment date
+	</td>
+	</tr>
+	<tr ng-repeat="ph in paymenthistory">
+	<td align="center">
+		{{ph.paymentAmount}}
+	</td>
+	<td align="center">
+		{{ph.billperiod}}
+	</td>
+	<td align="center">
+		{{ph.paymentDate}}
+	</td>
+	</tr>
+	</table>
+</div>
+
+    </div>
+</div>
+</div>

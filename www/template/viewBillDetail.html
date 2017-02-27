@@ -1,0 +1,75 @@
+<style>
+table,tr,td{
+	border:2px solid #000;
+}
+</style>
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    	<div ng-include="'template/dashboardLeft.html'"></div>
+    </div>
+    <div class="col-md-9">
+    	<div style="padding-bottom:10px;">
+    	<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	Detailed View</span>
+    </div>
+    	
+    	<table>
+<tr>
+	<td>
+		Data Usage	
+	</td>
+	<td>
+				{{data}}
+	</td>
+</tr>
+<tr>
+	<td>
+		Line Rental
+	</td>
+	<td>
+			{{lineRental}}
+	</td>
+</tr>
+<tr>
+	<td>
+Voice Usage
+	</td>
+	<td>
+		{{voice}}	
+	</td>
+</tr>
+
+<tr>
+	<td>
+	Tax
+	</td>
+	<td>
+		{{Tax}}	
+	</td>
+</tr>
+<tr>
+	<td>
+	Grand Total
+	</td>
+	<td>
+		{{total}}
+	</td>
+</tr>
+
+
+</table>
+
+    	<button style="margin-left: 26px; margin-top: 20px;display:none;" class="btn btn-danger" type="button" ng-click="paybill()">Pay Bill</button>
+
+    </div>
+   </div>
+</div>
+

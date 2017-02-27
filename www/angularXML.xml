@@ -1,0 +1,13 @@
+
+<registration>
+    <user number="1">
+      <name>sourav</name>
+      <number>123456789</number>
+      <password>welcome1</password>
+    </user>
+	<user number="2">
+      <name>souravd</name>
+      <number>123456789</number>
+      <password>welcome1</password>
+    </user>
+</registration>

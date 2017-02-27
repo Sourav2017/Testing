@@ -1,0 +1,41 @@
+
+<style>
+table,tr,td{
+   border:3px solid #000;
+}
+</style>
+
+      <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div ng-include="'template/dashboardLeft.html'"></div>
+    </div>
+    <div class="col-md-8">
+     <table >
+         <tr>
+            <td>Request Id</td>
+            <td>Catagory</td>
+            <td>Email</td>
+            <td>Contact</td>
+            <td>Issue</td>
+            <td>loggeddate</td>
+            <td>Status</td>
+         </tr>
+            <tr ng-repeat="sd in serviceDeatils">
+               <td>{{sd.requestId}}</td>
+               <td>{{sd.catagory}}</td>
+               <td>{{sd.Email}}</td>
+               <td>{{sd.Contact}}</td>
+               <td>{{sd.isuue}}</td>
+               <td>{{sd.loggeddate}}</td> 
+               <td>Open</td>
+            </tr> 
+         
+      </table>
+
+
+      <button style="margin-top:10px;" class="btn btn-info" type="button" ng-click="newService()">Initiate a New Service Request</button>
+
+    </div>
+   </div>
+</div>

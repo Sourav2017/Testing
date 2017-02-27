@@ -1,0 +1,15 @@
+
+<div class="container" ng-controller="headerCon">
+  <div class="row">
+    <div class="col-md-4">
+    		&nbsp;
+    </div>
+    <div class="col-md-8">
+	<div ng-show="headershowHide()">
+			<span style="font-weight:bold;">Welcome {{userCookie.userName}} ({{userCookie.userCode}})</span>
+			<a href="#/profile" style="color:red;">My Profile</a>
+			<a ng-click="clearCookie()" style="cursor:pointer;color:red;">Logout</a>
+	</div>	
+    </div>
+   </div>
+</div>

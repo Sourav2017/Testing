@@ -1,0 +1,45 @@
+
+<style>
+table,tr,td{
+   border:3px solid #000;
+}
+</style>
+
+      <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div ng-include="'template/dashboardLeft.html'"></div>
+    </div>
+    <div class="col-md-8">
+      <div style="padding-bottom:10px;">
+      <span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;"> Payment section</span>
+    </div>
+
+      <div style="padding-bottom:10px;font-weight:bold;font-size:16px;">Enter your card details</div>
+      </br>
+      Enter the Name in the Card
+      <input type="text" ng-model="card.name"/>
+
+      </br>
+      Enter the card number
+      <input type="text" maxlength="12" style="width: 140px;" ng-model="card.Number"/>
+      </br>
+      Expiry month <input type="text" maxlength="2" style="width: 26px;" ng-model="card.month"/> (e.g:12)
+      Expiry year <input type="text" maxlength="4" style="width: 60px;" ng-model="card.year"/> (e.g:2022)
+      </br>
+      Enter the cvv number
+      <input type="text" maxlength="3" style="width: 35px;" ng-model="card.cvv"/>
+
+      </br>
+
+<div ng-hide="checkoutshow" style="font-weight:bold;color:blue;font-size:16px;">
+          Payment is complemeted
+        </div>
+        <button class="btn btn-danger" type="button" ng-click="checkoutSubmit(card)">Pay Bill</button>
+      </div>
+
+      
+
+    </div>
+   </div>
+</div>

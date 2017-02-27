@@ -1,7 +1,7 @@
-var TaleCare = angular.module("TaleCare", ['ngRoute','ngCookies']);
- TaleCare.run(function($rootScope,$location) {
-     $rootScope.test = "rootscope variable";
-	/*$rootScope.isLogin = false;
+var TaleCare = angular.module("TaleCare", ['ngRoute','ngCookies','TaleCare.controllers','TaleCare.services']);
+ TaleCare.run(function($rootScope,CookieService,$location) {
+    /* $rootScope.test = "rootscope variable";
+	$rootScope.isLogin = false;
 	$rootScope.uid = ""; */
 	$rootScope.loggedIn = false;
 
@@ -82,9 +82,50 @@ TaleCare.config(function($routeProvider) {
 
 TaleCare.controller('mainController', function($scope,$location,$rootScope) {
 	
+	//$location.path("/signin");
+
+	
+	//Test();
+	
+    /* $scope.students = [
+        {name: 'Mark Waugh', city:'New York'},
+        {name: 'Steve Jonathan', city:'London'},
+        {name: 'John Marcus', city:'Paris'}
+    ];
+	$scope.submit = function(){
+		//$root.isLogin=true;
+		//if($scope.uid == "admin" && $scope.pwd=="admin"){
+			//$cookies.put('myFavorite', 'oatmeal');
+			//alert(2);
+			//$location.path("/home");
+			$rootScope.isLogin = true;
+			//$rootScope.test = "ok";
+			$rootScope.uid = $scope.uid;
+			$location.path("/home")
+		//}
+	}
+    $scope.message = "Click on the hyper link to view the students list."; */
 	
 	
 	
 });
 
+
+/* TaleCare.service('CookieService', function ($cookieStore) {
+	
+	 this.addToCookie = function(userName,password) {
+		//$cookieStore.put('userName', userName);
+	};
+	
+	this.getFromCookie = function() {
+		//var userName = $cookieStore.get('userName');
+		//return userName;
+		alert(1);
+	};
+	
+	this.removeFromCookie = function() {
+		//$cookieStore.remove('userName');
+	} 
+	
+}); */
 
