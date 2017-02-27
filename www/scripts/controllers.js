@@ -150,7 +150,7 @@ controllerModule.controller('RegistrationCon', function ($scope,$http,CookieServ
 			//alert(CookieService.getUserStorage(registartion.firstName).firstName);
 			
 	}
-$scope.takePic = function(registartion){
+$scope.takePic = function(){
 navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
 }
 
