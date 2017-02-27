@@ -1,4 +1,10 @@
-<div class="container">
+<style>
+table.th,td,tr{
+    border:1px solid #000;
+}
+
+</style>
+<div class="">
   <div class="row" style="margin-top:10px;">
     <div style="display:inline-block;margin-right:10px;">
         <button class="btn btn-success" type="button" ng-click="addUser();">Add User</button>
@@ -6,6 +12,39 @@
     <div style="display:inline-block;margin-right:10px;">
         <button class="btn btn-primary" type="button" ng-click="viewallUser();">All users</button>
     </div>
+
+    </div>
+
+    <div>
+
+<div >
+    
+
+   <table>
+        <thead>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>Email</td>
+            <td>Address</td>
+            <td>Contact</td>
+            <td>Picture</td>
+            
+            
+        </thead>
+        <tr ng-repeat="x in detailuser"> 
+            <td>{{x.firstName}}</td>
+            <td>{{x.lasttName}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.address}}</td>
+            <td>{{x.contact}}</td>
+            <td>{{x.contact}}</td>
+            <td><img src="{{x.imageData}}"</img></td>
+        </tr>
+
+   </table>
+
+
+</div>  
 
     </div>
 </div>

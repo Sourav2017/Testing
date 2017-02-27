@@ -31,7 +31,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject).one); */
 });
 
 controllerModule.controller('Logincon', function ($scope,$http,CookieService,$location,$rootScope) {
-	alert(0);
+	
 	$scope.forgetpasswordshow = false;
 	$scope.passwordsuccess = false;
 	
@@ -159,6 +159,8 @@ $scope.stepinitial= true;
 					
 					$rootScope.usercode = registartion.username;	
 					CookieService.addToCookie(registartion.firstName,registartion.username);
+					$rootScope.detailuser.push(registartion);
+					console.dir($rootScope.detailuser);
 					$location.path("/addsales");		
 										
 			}	
@@ -167,7 +169,7 @@ $scope.stepinitial= true;
 			
 	}
 $scope.takePic = function(){
-	alert('takePic');
+	
 	try{
 navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
 }
@@ -194,6 +196,7 @@ function onFail(){
       // The inline CSS rules are used to resize the image
       //
       smallImage.src = imageData;
+      registartion.imageData = imageData;
     }
 	
 	

@@ -4,7 +4,7 @@ var TaleCare = angular.module("TaleCare", ['ngRoute','ngCookies','TaleCare.contr
 	$rootScope.isLogin = false;
 	$rootScope.uid = ""; */
 	$rootScope.loggedIn = false;
-
+$rootScope.detailuser = [];
 	$rootScope.$on('$routeChangeStart', function (event, toState, toParams, fromState, fromParams) {
 	  	
 	  	
