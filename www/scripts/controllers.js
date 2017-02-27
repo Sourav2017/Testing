@@ -93,7 +93,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 
 
 	$scope.reg= "";
-	$scope.stepinitial= true;
+	$scope.reg.leaddate = new Date();
 	$scope.validationreg = true;
 
 	$scope.registartionstep1 = function(registartion){
@@ -144,6 +144,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	}
 
 	$scope.registartionstep2 = function(registartion){
+
 
 
 			//CookieService.getUserStorage(username);	

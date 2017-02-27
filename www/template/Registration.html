@@ -15,6 +15,10 @@
 <div>
 <div ng-show="stepinitial">
 	<div style="padding-bottom:10px;">
+		Lead Date*
+		<input disabled="true" type="text" ng-model="reg.leaddate" style="border:1px solid #ccc !important;"></input>
+	</div>
+	<div style="padding-bottom:10px;">
 		Customer FirstName*
 		<input type="text" ng-model="reg.firstName" style="border:1px solid #ccc !important;"></input>
 	</div>
@@ -35,9 +39,19 @@
 	<div style="padding-bottom:10px;">
 		Customer Picture*
 		<div id="">
-			<img  style="height:150px;width:150px;" src="" id="smallImage"></img>
+			<img  style="height:200px;width:200px;display:none" src="" id="smallImage"></img>
 		</div>
 		<button type="submit" class="btn btn-primary" ng-click="takePic()">Take Picture</button>
+	</div>
+
+	<div>
+		Service Type*
+		
+		<select>
+					<option>Broadband connection </option>
+					<option>Landline connection </option>
+		</select>		
+
 	</div>
 
 	<div style="padding-bottom:10px;">
