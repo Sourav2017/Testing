@@ -78,6 +78,20 @@ controllerModule.controller('Logincon', function ($scope,$http,CookieService,$lo
 
 controllerModule.controller('RegistrationCon', function ($scope,$http,CookieService,$rootScope,$location) {
 	
+document.addEventListener("deviceready",onDeviceReady,false);
+    // PhoneGap is ready to be used!
+    //
+    function onDeviceReady() {
+        try{pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+        alert(1);
+    }
+    catch(e){
+    	alert(e);
+    }
+    }
+
+
 	$scope.reg= "";
 	$scope.stepinitial= true;
 	$scope.validationreg = true;
@@ -151,10 +165,19 @@ controllerModule.controller('RegistrationCon', function ($scope,$http,CookieServ
 			
 	}
 $scope.takePic = function(){
+	alert('takePic');
+	try{
 navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
 }
+catch(e){
+	alert(e);
+}
 
+}
 
+function onFail(){
+	alert("fail");
+}
 	function onPhotoFileSuccess(imageData) {
       // Get image handle
       console.log(JSON.stringify(imageData));

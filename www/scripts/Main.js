@@ -20,13 +20,7 @@ var TaleCare = angular.module("TaleCare", ['ngRoute','ngCookies','TaleCare.contr
 		}
 });
 
-document.addEventListener("deviceready",onDeviceReady,false);
-    // PhoneGap is ready to be used!
-    //
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }	
+	
 	
 })
 
