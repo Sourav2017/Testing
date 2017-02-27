@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  
+<registration>
+  <users>
+    <user>
+      <name>sourav</name>
+      <number>123456789</number>
+      <password>welcome1</password>
+    </user>
+  </users>
+</registration>
