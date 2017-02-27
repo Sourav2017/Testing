@@ -3,10 +3,9 @@
 	  			border:1px solid #ccc !important;
 	  		}
 	  </style>
-<div class="container">
+<div class="">
   <div class="row">
     <div class="col-md-5">
-    	&nbsp;
     </div>
     <div class="col-md-7">
     	<div>
@@ -16,7 +15,7 @@
 <div ng-show="stepinitial">
 	<div style="padding-bottom:10px;">
 		Lead Date*
-		<input disabled="true" type="text" ng-model="reg.leaddate" style="border:1px solid #ccc !important;"></input>
+		{{reg.leaddate}}
 	</div>
 	<div style="padding-bottom:10px;">
 		Customer FirstName*
@@ -24,17 +23,17 @@
 	</div>
 	<div style="padding-bottom:10px;">
 		Customer LastName*
-		<input type=text" ng-model="reg.lasttName" style="border:1px solid #ccc !important;"></input>
+		<input type="text" ng-model="reg.lasttName" style="border:1px solid #ccc !important;"></input>
 	</div>
 
 	<div style="padding-bottom:10px;">
 		Customer Contact*
-		<input type=text" ng-model="reg.contact" style="border:1px solid #ccc !important;"></input>
+		<input type="text" ng-model="reg.contact" style="border:1px solid #ccc !important;"></input>
 	</div>
 
 	<div style="padding-bottom:10px;">
 		Customer Email*
-		<input type=email" ng-model="reg.email" style="border:1px solid #ccc !important;"/input/>
+		<input type="email" ng-model="reg.email" style="border:1px solid #ccc !important;"></input/>
 	</div>
 	<div style="padding-bottom:10px;">
 		Customer Picture*
@@ -67,18 +66,18 @@
 <div ng-show="!stepinitial">
 
 <div style="padding-bottom:10px;">
-	UserName
+	Lead ID
 	<input type="text" readonly=true ng-model="reg.username" style="border:1px solid #ccc !important;"></input>
 </div>
 <div style="padding-bottom:10px;">
-	Passwodr
+	Password
 	<input type="password" ng-model="reg.password" style="border:1px solid #ccc !important;"></input>
 </div>
 <button type="submit" class="btn btn-primary" ng-click="registartionstep2(reg)">Submit</button>
 </div>
 
 </div>
-<a href="#/signin" style="font-size:22px;">Try here to sign in</a>
+
 </div>
 </div>
 </div>

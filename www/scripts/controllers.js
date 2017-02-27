@@ -31,6 +31,7 @@ console.log('retrievedObject: ', JSON.parse(retrievedObject).one); */
 });
 
 controllerModule.controller('Logincon', function ($scope,$http,CookieService,$location,$rootScope) {
+	alert(0);
 	$scope.forgetpasswordshow = false;
 	$scope.passwordsuccess = false;
 	
@@ -95,7 +96,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	$scope.reg= "";
 	$scope.reg.leaddate = new Date();
 	$scope.validationreg = true;
-
+$scope.stepinitial= true;
 	$scope.registartionstep1 = function(registartion){
 
 			var username = registartion.firstName + "_" + Math.floor(Math.random() * 1000);
@@ -158,7 +159,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 					
 					$rootScope.usercode = registartion.username;	
 					CookieService.addToCookie(registartion.firstName,registartion.username);
-					$location.path("/dashboard");		
+					$location.path("/addsales");		
 										
 			}	
 

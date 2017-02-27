@@ -75,7 +75,7 @@ TaleCare.config(function($routeProvider) {
 		    controller: 'checkoutCon'
 		})
         .otherwise({
-            redirectTo: '/Home'
+            redirectTo: '/signin'
         });
 });
 
