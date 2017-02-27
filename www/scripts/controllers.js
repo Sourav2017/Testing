@@ -36,16 +36,17 @@ controllerModule.controller('Logincon', function ($scope,$http,CookieService,$lo
 	
 	$scope.login = function(login){
 		
-		if(CookieService.getUserExist(login.username)){
+		if(login.username =="TestUser"){
 				
-				var userdetails = CookieService.getUserStorage(login.username);
-				if(userdetails.password == login.password){
+				//var userdetails = CookieService.getUserStorage(login.username);
+				if("Welcome@1" == login.password){
+					
 					$rootScope.loggedIn = true;	
-					$rootScope.username = userdetails.firstName;
+					$rootScope.username = "Test User";
 					
 					$rootScope.usercode = login.username;	
-					CookieService.addToCookie(userdetails.firstName,login.username);
-					$location.path("/dashboard");		
+					CookieService.addToCookie("Test User",login.username);
+					$location.path("/addsales");		
 				}
 				else{
 
@@ -149,10 +150,29 @@ controllerModule.controller('RegistrationCon', function ($scope,$http,CookieServ
 			//alert(CookieService.getUserStorage(registartion.firstName).firstName);
 			
 	}
+$scope.takePic = function(registartion){
+navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+}
 
+
+	function onPhotoFileSuccess(imageData) {
+      // Get image handle
+      console.log(JSON.stringify(imageData));
+      
+   	  // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = imageData;
+    }
 	
 	
-	
+
 });
 
 
@@ -168,6 +188,9 @@ controllerModule.controller('dashboardCon', function ($rootScope,$scope,$http,Co
 	$scope.balanceDue = "2500";
 	$scope.dueDate = "07/16/2016";
 
+$scope.addUser = function(){
+		$location.path("/adduser");		
+	}
 	
 	$scope.billHistoty = function(){
 		var histortybill = "/dashboard:"+userProfile.userCode;

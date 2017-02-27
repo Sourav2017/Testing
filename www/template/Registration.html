@@ -15,26 +15,31 @@
 <div>
 <div ng-show="stepinitial">
 	<div style="padding-bottom:10px;">
-		FirstName*
+		Customer FirstName*
 		<input type="text" ng-model="reg.firstName" style="border:1px solid #ccc !important;"></input>
 	</div>
 	<div style="padding-bottom:10px;">
-		LastName*
+		Customer LastName*
 		<input type=text" ng-model="reg.lasttName" style="border:1px solid #ccc !important;"></input>
 	</div>
 
 	<div style="padding-bottom:10px;">
-		Contact*
+		Customer Contact*
 		<input type=text" ng-model="reg.contact" style="border:1px solid #ccc !important;"></input>
 	</div>
 
 	<div style="padding-bottom:10px;">
-		Email*
+		Customer Email*
 		<input type=email" ng-model="reg.email" style="border:1px solid #ccc !important;"/input/>
+	</div>
+	<div style="padding-bottom:10px;">
+		Customer Picture*
+		<div id="smallImage"></div>
+		<button type="submit" class="btn btn-primary" ng-click="takePic()">Take Picture</button>
 	</div>
 
 	<div style="padding-bottom:10px;">
-		Address*
+		Customer Address*
 		<textarea ng-model="reg.address" style="border:1px solid #ccc !important;"></textarea>
 	</div>
 	<div ng-hide="validationreg" style="font-size:18px;color:red;font-weight:bold;padding-bottom:10px;">

@@ -1,23 +1,11 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-3">
-    	<div ng-include="'template/dashboardLeft.html'"></div>
+  <div class="row" style="margin-top:10px;">
+    <div style="display:inline-block;margin-right:10px;">
+        <button class="btn btn-success" type="button" ng-click="addUser();">Add User</button>
     </div>
-    <div class="col-md-9">
-    	<div>
-    	<span style="font-weight:bold;color:#135a97;font-size:41px;text-align:center;">	Dashboard</span>
+    <div style="display:inline-block;margin-right:10px;">
+        <button class="btn btn-primary" type="button" ng-click="viewallUser();">All users</button>
     </div>
-    	<div style="font-weight:bold;">Current Bill</div>
-    	<div style="font-weight:bold;">Mobile NUmber:{{contactNum}}</div>
-    	<div style="font-weight:bold;">Acct No :<span>{{acctNo}}</span></div>
-    	<div style="font-weight:bold;">Balance Due :<span>{{balanceDue}}</span></div>
-    	<div style="font-weight:bold;">Due Date :<span>{{dueDate}}</span></div>
-
-
-    	<button class="btn btn-info" type="button" ng-click="billHistoty()">Bill History</button>
-    	<button class="btn btn-success" type="button" ng-click="Viewbill(balanceDue)">View Bill</button>
-    	<button class="btn btn-danger" type="button" ng-click="checkout()">Pay Bill</button>
 
     </div>
-   </div>
 </div>

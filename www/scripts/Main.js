@@ -20,7 +20,13 @@ var TaleCare = angular.module("TaleCare", ['ngRoute','ngCookies','TaleCare.contr
 		}
 });
 
-	
+document.addEventListener("deviceready",onDeviceReady,false);
+    // PhoneGap is ready to be used!
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }	
 	
 })
 
@@ -30,11 +36,11 @@ TaleCare.config(function($routeProvider) {
             templateUrl: 'template/Signin.html',
             controller: 'Logincon'
         })
-        .when('/registraion', {
+        .when('/adduser', {
             templateUrl: 'template/Registration.html',
             controller: 'RegistrationCon'
         })
-		.when('/dashboard', {
+		.when('/addsales', {
             templateUrl: 'template/Dashboard.html',
             controller: 'dashboardCon'
         })
